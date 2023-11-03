@@ -94,11 +94,9 @@ public class CarRentalSystem {
                     System.out.println("Car: "+ selectedCar.getBrand() + " "+selectedCar.getModel());
                     System.out.println("Rental Days: "+rentalDays);
                     System.out.println("Total Price: Rs. "+ totalPrice);
-
                     System.out.println("\nConfirm rental(Y/N)");
-                    String confirm=scanner.nextLine();
-
-                    if(confirm.equalsIgnoreCase("y")){
+                    String confirm=scanner.next();
+                    if(confirm.equalsIgnoreCase("Y")){
                         rentCar(selectedCar,newCustomer,rentalDays);
                         System.out.println("\nCar rented successfully");
                     }else{
@@ -109,7 +107,7 @@ public class CarRentalSystem {
                 }else if(choice==2) {
                 System.out.println("\n***** Return the car *****");
                 System.out.println("Enter the car ID you want to return");
-                String carID= scanner.nextLine();
+                String carID= scanner.next();
 
                 Car carToreturn=null;
                 for (Car car:cars){
